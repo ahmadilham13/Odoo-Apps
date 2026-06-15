@@ -27,6 +27,57 @@ a full-featured [Open Source ERP](https://www.odoo.com) when you install several
 For a standard installation please follow the [Setup instructions](https://www.odoo.com/documentation/master/administration/install/install.html)
 from the documentation.
 
+### Langkah-langkah Instalasi Lokal
+
+Ikuti langkah-langkah berikut untuk menginstal dan menjalankan aplikasi ini secara lokal:
+
+1. **Persyaratan Sistem:**
+   - Pastikan **Python** (versi 3.10 atau lebih baru) telah terinstal di sistem Anda.
+   - Pastikan **PostgreSQL** telah terinstal dan berjalan. Buat user dan database untuk aplikasi Odoo.
+
+2. **Membuat Virtual Environment:**
+   Buat virtual environment baru bernama `odoo-venv` menggunakan terminal:
+   ```cmd
+   python -m venv odoo-venv
+   ```
+
+3. **Aktivasi Virtual Environment:**
+   Aktifkan virtual environment tersebut melalui terminal.
+   Jika menggunakan PowerShell:
+   ```powershell
+   .\odoo-venv\Scripts\Activate.ps1
+   ```
+   Jika menggunakan Command Prompt:
+   ```cmd
+   .\odoo-venv\Scripts\activate.bat
+   ```
+
+4. **Instalasi Dependencies:**
+   Setelah virtual environment aktif, update `pip` terlebih dahulu dengan perintah:
+   ```cmd
+   python -m pip install --upgrade pip
+   ```
+   Kemudian instal semua library yang dibutuhkan:
+   ```cmd
+   pip install -r requirements.txt
+   ```
+
+5. **Konfigurasi Database:**
+   Salin file konfigurasi bawaan dari folder `debian` ke direktori utama dengan perintah:
+   ```cmd
+   cp .\debian\odoo.conf .\odoo.conf
+   ```
+   Selanjutnya, buka dan sesuaikan file konfigurasi `odoo.conf` tersebut. Pastikan kredensial PostgreSQL Anda (`db_host`, `db_port`, `db_user`, dan `db_password`) sudah sesuai.
+
+6. **Menjalankan Aplikasi:**
+   Jalankan server Odoo menggunakan file konfigurasi yang sudah disiapkan dengan perintah:
+   ```cmd
+   python odoo-bin -c odoo.conf
+   ```
+
+7. **Akses Aplikasi:**
+   Buka web browser dan akses alamat `http://localhost:8069` untuk membuka halaman aplikasi Odoo Anda.
+
 To learn the software, we recommend the [Odoo eLearning](https://www.odoo.com/slides),
 or [Scale-up, the business game](https://www.odoo.com/page/scale-up-business-game).
 Developers can start with [the developer tutorials](https://www.odoo.com/documentation/master/developer/howtos.html).
