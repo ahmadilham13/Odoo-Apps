@@ -32,7 +32,7 @@ from the documentation.
 Ikuti langkah-langkah berikut untuk menginstal dan menjalankan aplikasi ini secara lokal:
 
 1. **Persyaratan Sistem:**
-   - Pastikan **Python** (versi 3.10 atau lebih baru) telah terinstal di sistem Anda.
+   - Pastikan **Python** (versi 3.12 atau lebih baru) telah terinstal di sistem Anda.
    - Pastikan **PostgreSQL** telah terinstal dan berjalan. Buat user dan database untuk aplikasi Odoo.
 
 2. **Membuat Virtual Environment:**
